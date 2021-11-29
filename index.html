@@ -12,94 +12,91 @@
       margin: 0;
       padding: 0;
     }
-
   </style>
 </head>
 
 <body>
   <div id="selector-id"></div>
-  <script src="./js/froala_pages.min.js"></script>
+</body>
+</html>
+
+<script src="./js/froala_pages.min.js"></script>
 
   <script>
-FroalaPages.RegisterDesignBlock('LALA', 
-  `<section class="fdb-block">
-    <div class="container">
-      <div class="row">
-        <div class="col">
-          <p class="lead">asdf</p>
-          <img src="http://localhost:5500/img/lala/lalaland (1).png" style="width: 100%;" class="fr-fic fr-dib fr-draggable">
+    const ENV_HOST = 'http://192.168.37.205:5500'
+    FroalaPages.RegisterDesignBlock('LALA', 
+      `<section class="fdb-block">
+        <div class="container">
+          <div class="row">
+            <div class="col">
+              <p class="lead">asdf</p>
+              <img src="${ENV_HOST}/img/lala/lalaland (1).png" style="width: 100%;" class="fr-fic fr-dib fr-draggable">
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-  </section>`,
-'lala/lalaland (1).png');
-FroalaPages.RegisterDesignBlock('LALA', 
-  `<section class="fdb-block">
-  <img src="http://localhost:5500/img/lala/lalaland (2).png" style="width: 100%;">
-  </section>`,
-'lala/lalaland (2).png');
-FroalaPages.RegisterDesignBlock('LALA', 
-  `<section class="fdb-block">\n
-      <div class="container">\n
-        <div class="row">
-        <div class="col">
-        <div class="row justify-content-center">\n
-          <div class="col-12 col-md-8 text-center">\n
-            <img src="http://localhost:5500/img/lala/lalaland (3).png" style="width: 100%;">
-            <p>asdf</p
+      </section>`,
+    'lala/lalaland (1).png');
+    FroalaPages.RegisterDesignBlock('LALA', 
+      `<section class="fdb-block">
+      <img src="${ENV_HOST}/img/lala/lalaland (2).png" style="width: 100%;">
+      </section>`,
+    'lala/lalaland (2).png');
+    FroalaPages.RegisterDesignBlock('LALA', 
+      `<section class="fdb-block">\n
+          <div class="container">\n
+            <div class="row">
+            <div class="col">
+            <div class="row justify-content-center">\n
+              <div class="col-12 col-md-8 text-center">\n
+                <img src="${ENV_HOST}/img/lala/lalaland (3).png" style="width: 100%;">
+                <p>asdf</p
+              </div>\n
+              </div>\n
+              </div>\n
+            </div>\n
           </div>\n
+        </section>`,
+    'lala/lalaland (3).png');
+    FroalaPages.RegisterDesignBlock('LALA', 
+      `<section class="fdb-block">\n
+          <div class="container">\n
+            <div class="row justify-content-center">\n
+              <div class="col-12 col-md-8 text-center">\n
+                <img src="${ENV_HOST}/img/lala/lalaland (3).png" style="width: 100%;">
+                <p>asdf</p
+              </div>\n
+            </div>\n
           </div>\n
+        </section>`,
+    'lala/lalaland (4).png');
+    FroalaPages.RegisterDesignBlock('LALA', 
+      `<section class="fdb-block">\n
+          <div class="container">\n
+            <div class="row">\n
+              <div class="col-12 col-md-8">\n
+                <p>asdf</p
+              </div>\n
+            </div>\n
           </div>\n
-        </div>\n
-      </div>\n
-    </section>`,
-'lala/lalaland (3).png');
-FroalaPages.RegisterDesignBlock('LALA', 
-  `<section class="fdb-block">\n
-      <div class="container">\n
-        <div class="row justify-content-center">\n
-          <div class="col-12 col-md-8 text-center">\n
-            <img src="http://localhost:5500/img/lala/lalaland (3).png" style="width: 100%;">
-            <p>asdf</p
-          </div>\n
-        </div>\n
-      </div>\n
-    </section>`,
-'lala/lalaland (4).png');
-FroalaPages.RegisterDesignBlock('LALA', 
-  `<section class="fdb-block">\n
-      <div class="container">\n
-        <div class="row">\n
-          <div class="col-12 col-md-8">\n
-            <p>asdf</p
-          </div>\n
-        </div>\n
-      </div>\n
-    </section>`,
-'lala/lalaland (5).png');
+        </section>`,
+    'lala/lalaland (5).png');
 
-FroalaPages.Button.Register('myButton', {
-title: 'My Button',
-icon: {
-type: 'svg',
-template: '<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"/><path d="M0 0h24v24H0z" fill="none"/></svg>'
-},
-callback() {
-// Wave the world.
-alert('Hello World!');
-
-// Show current active block.
-console.log(this.page.activeBlock);
-}
-})
-    
+    FroalaPages.Button.Register('myButton', {
+      title: 'My Button',
+      icon: {
+        type: 'svg',
+        template: '<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"/><path d="M0 0h24v24H0z" fill="none"/></svg>'
+      },
+      callback() {
+        // Wave the world.
+        alert('Hello World!');
+        // Show current active block.
+        console.log(this.page.activeBlock);
+      }
+    })
     // Init pages.
     new FroalaPages('selector-id', {
       designsDefaultBlocks: 'LALA',
-      designsThumbsDir: 'http://localhost:5500/img/',
+      designsThumbsDir: `${ENV_HOST}/img/`,
     })
     </script>
-
-</body>
-
-</html>
